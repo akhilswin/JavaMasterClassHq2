@@ -8,6 +8,19 @@ import java.util.*;
 import org.junit.jupiter.api.Test;
 
 class MainClassTest {
+
+	@Test
+	public void testExceptionConditon() throws Exception {
+
+		TestUtils.yakshaAssert(TestUtils.currentTest(), true, TestUtils.boundaryTestFile);
+	}
+
+	@Test
+	public void testBoundaryCondition() throws Exception {
+
+		TestUtils.yakshaAssert(TestUtils.currentTest(), true, TestUtils.exceptionTestFile);
+	}
+
 	@Test
 	void testfindBestServiceEngineer() throws Exception {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
